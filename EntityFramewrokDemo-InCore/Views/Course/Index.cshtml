@@ -1,0 +1,52 @@
+﻿@model IEnumerable<EntityFramewrokDemo_InCore.Models.Course>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+
+
+@{ 
+    if (@ViewBag.msg == "records")
+    {
+    <table>
+        <tr>
+            <th> ID </th>
+            <th> Course Name </th>
+            <th> Duration </th>
+            <th> Description </th>
+        </tr>
+
+        @{ foreach (var temp in Model)
+            {
+        <tr>
+            <td>
+                @temp.Id
+            </td>
+            <td>
+                @temp.CourseName
+
+            </td>
+            <td>
+                @temp.Duration
+
+            </td>
+            <td>
+                @temp.Description
+            </td>
+        </tr>
+
+                }
+            }
+    </table>
+    }
+
+    else
+    {
+
+        @ViewBag.msg
+    }
+}
+

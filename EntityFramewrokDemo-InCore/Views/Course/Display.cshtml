@@ -1,0 +1,22 @@
+﻿@model EntityFramewrokDemo_InCore.Models.Course
+@{
+    ViewData["Title"] = "Display";
+}
+
+<h1>Display</h1>
+
+@{ 
+    if (ViewBag.msg == "found")
+    {
+    <pre>
+    @Model.Id
+    @Model.CourseName
+    @Model.Duration
+    @Model.Description
+    </pre>
+    }
+    else
+    {
+        @ViewBag.msg
+        }
+    }

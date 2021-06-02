@@ -1,0 +1,19 @@
+﻿@model EntityFramewrokDemo_InCore.Models.Course
+@{
+    ViewData["Title"] = "Edity";
+}
+
+<h1>Edit</h1>
+
+<form method="post">
+    <label for="id"> ID </label>
+    <input type="number" id="id" name="txtId" /> <br />
+    <label for="name"> Enter New Course Name </label>
+    <input type="text" id="name" name="txtName" value="Model.CourseName" /> <br />
+    <label for="duration"> Enter New Course Duration </label>
+    <input type="number" id="duration" name="txtDuration" /> <br />
+    <label for="description"> Enter New Course description </label>
+    <input type="text" id="description" name="txtDescription" /> <br />
+    <input type="submit" value="Submit" />
+</form>
+
